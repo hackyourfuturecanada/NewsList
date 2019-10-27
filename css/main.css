@@ -1,0 +1,121 @@
+body {
+  background: #f0f0f0;
+  padding: 0px;
+  margin: 0px;
+}
+
+form {
+  display: flex;
+  width: 40%;
+  margin: auto;
+  flex-direction: column;
+  background: gray;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  display: none;
+  border-radius: 10px;
+}
+
+form>input {
+  padding: 10px;
+  border: unset;
+  border-bottom: 2px solid burlywood;
+  border-radius: 40px;
+  text-align: center;
+  width: 80%;
+}
+
+form>button {
+  margin: 10px;
+  background: #5f5fe9;
+  border: unset;
+  color: white;
+  padding: 10px;
+  width: 40%;
+}
+
+form>button:hover {
+  background: #c5c5ff;
+}
+
+
+input:focus,
+button:focus {
+  outline: none;
+}
+
+form>h3 {
+  color: #f6e1bb;
+  ;
+}
+
+header {
+  background: #fde09f;
+  padding: 20px;
+  text-align: center;
+  font-size: 2em;
+}
+
+p {
+  display: flex;
+  padding: 10px;
+  width: 80%;
+  height: 80px;
+  margin: auto;
+  background: palegoldenrod;
+  border-radius: 5px;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20px;
+
+
+}
+
+p>span {
+  color: gray;
+  margin: 1px;
+  width: 50%;
+}
+
+#row-desc {
+  color: white;
+  height: 40px;
+  background: #cdcccc;
+}
+
+#row-desc>span {
+  color: black;
+}
+
+.fa fa-heart {
+  font-size: 36px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.fav {
+  text-align: right;
+  margin-right: 10px;
+}
+
+#log {
+  font-size: 15px;
+}
+
+#log:hover {
+  color: white;
+}
+
+#displayFav {
+  background-color: #a47860;
+  color: white;
+  padding: 9px;
+  font-size: 13px;
+  border: none;
+  border-radius: 10px;
+}
