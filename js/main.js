@@ -73,7 +73,10 @@ function favIcon() {
       this.style.color = "black";
       // parse the ID of the articl
       indexOfArticles = parseInt(this.id);
-      if (user) {
+      if(trackBookMarks() > 3){
+        alert("oops, You can not have more than 3 articles bookmarked ")
+      }
+      if (user && user.bookMarks.length < 4) {
         this.style.color = "red";
         // if item does not exist push it
         if (user.bookMarks.indexOf(indexOfArticles) == -1)
@@ -96,6 +99,7 @@ document.getElementById("createAccount").addEventListener("click", function (e) 
   e.preventDefault();
   user = new User();
   userName = document.getElementsByName("userName")[0].value;
+    trackBookMarks=counter(0);
   if (userName.length > 0) {
     user.name = userName;
     user.bookMarks = [];
@@ -120,7 +124,7 @@ function displayFav() {
     if (user != null && user.bookMarks.length > 0) {
       user.bookMarks.sort();
       document.getElementById("articles").innerHTML = "";
-      for (let i = 0; i < articles.length ; i++) {
+      for (let i = 0; i < 3; i++) {
         if (user.bookMarks.indexOf(i) > -1) {
           document.getElementById("articles").innerHTML += `<p> <span>${articles[i].author}</span>  <span>${articles[i].title} </span> </p>`;
         }
@@ -129,3 +133,17 @@ function displayFav() {
     }
   });
 }
+
+
+
+let trackBookMarks=null;
+let counter = function (x) {
+  if (x == undefined) {
+    i = 0;
+  } else { i = x; }
+
+  return function () {
+    i++;
+    return i;
+  }
+};
